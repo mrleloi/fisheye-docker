@@ -11,14 +11,15 @@ services:
       FECRU_CONFIGURE_DB_PORT: '5432'
       FECRU_CONFIGURE_DB_USER: fisheye
       FECRU_CONFIGURE_DB_PASSWORD: 'PZz-0oOmnW#fgT:kc^7c'
+      FECRU_CONFIGURE_ADMIN_PASSWORD: '123456a@A'
       FISHEYE_OPTS: '-javaagent:/atlassian-agent.jar'
       JVM_MINIMUM_MEMORY: 512m
       JVM_MAXIMUM_MEMORY: 2048m
       #   If Use Reverse Proxy Uncomment this Line
-      #ATL_TOMCAT_SCHEME: 'https'
-      #ATL_TOMCAT_SECURE: 'true'
-      #ATL_PROXY_PORT: '443'
-      #ATL_PROXY_NAME: 'fisheye.my-site.com'
+      ATL_TOMCAT_SCHEME: 'https'
+      ATL_TOMCAT_SECURE: 'true'
+      ATL_PROXY_PORT: '443'
+      ATL_PROXY_NAME: 'fisheye.baityapp.online'
     volumes:
       - fisheye-server:/atlassian/data/fisheye
       - ./agent/atlassian-agent.jar:/atlassian-agent.jar:ro
